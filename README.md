@@ -28,15 +28,6 @@ Controller & Route:
 ```typescript
 import { Controller, Get } from '@lreading/ts-express-framework';
 
-  summary?: string;
-  allowAnonymous?: boolean;
-  description?: string;
-  bodyDefinition?: BodyDefinition;
-  exampleResponse?: any;
-  params?: ParamDefinition[];
-  allowedRoles?: string[];
-
-
 @Controller('/hello')
 export class HelloController {
   @Get('/', {
