@@ -7,5 +7,5 @@ export interface AuditableEntity<T extends string | number> {
   lastModifiedBy: User<T>;
   lastModifiedDate: Date;
 
-  getValidationErrors(): Promise<string>;
+  getValidationErrors(): Promise<string[]>;
 }
