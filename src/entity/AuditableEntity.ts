@@ -6,6 +6,4 @@ export interface AuditableEntity<T extends string | number> {
   createdDate: Date;
   lastModifiedBy: User<T>;
   lastModifiedDate: Date;
-
-  getValidationErrors(): Promise<string[]>;
 }
