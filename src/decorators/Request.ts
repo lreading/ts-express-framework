@@ -57,6 +57,11 @@ export const RequestDecorator = (path: string, method: METHOD, options: RequestD
   return function (target: unknown, propertyKey: string) {
     const implementation = async (req: Request, res: Response, instance: any) => {
       try {
+        logger.warn('instance');
+        logger.warn(Object.keys(instance));
+        logger.warn(`propertyKey ${propertyKey}`);
+        logger.warn(`target ${Object.keys(target)}`);
+        logger.warn(typeof instance[propertyKey]);
         const original = await instance[propertyKey](req, res);
         return getResponseWrapper(req.method, original).toResponse(res);
       } catch (err) {

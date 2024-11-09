@@ -39,7 +39,7 @@ export class HelloController {
   async helloWorld(req, res) {
     // Return whatever type/object you want.
     // This will be wrapped into a response object:
-    // { data: <your return value> }
+    // { <your return value> }
     return 'Hello, World!';
   }
 
@@ -115,7 +115,7 @@ There is an ApiResponse wrapper that will take generate the status code and wrap
 
 ```typescript
 {
-  data: <your return value>
+    <your return value>
 }
 ```
 

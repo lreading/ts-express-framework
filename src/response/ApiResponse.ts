@@ -34,7 +34,7 @@ export abstract class ApiResponse<T> {
 
   toResponse(res: Response): Response | void {
     const code: number = this._status;
-    const data = this._body ? { data: this._body } : undefined;
+    const data = this._body || undefined;
     return res.status(code).json(data);
   }
 }
