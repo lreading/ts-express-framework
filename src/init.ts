@@ -32,7 +32,7 @@ const getMiddleware = (
   const passThrough = (_req: Request, _res: Response, next: NextFunction) => next();
 
   if (allowAnonymous) {
-    return middlewareArray;
+    return passThrough;
   }
 
   if (useRbac) {
