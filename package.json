@@ -1,6 +1,6 @@
 {
   "name": "@lreading/ts-express-framework",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Typescript Express Framework for REST APIs",
   "main": "dist/index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "typescript": "^4.4.3"
   },
   "dependencies": {
-    "@lreading/ts-logger": "^1.0.9",
+    "@lreading/ts-logger": "^1.0.11",
     "class-transformer": "^0.5.1",
     "jsonwebtoken": "9",
     "jwks-rsa": "^2.0.5",
@@ -38,5 +38,10 @@
     "openapi-types": "^12.0.0",
     "reflect-metadata": "^0.1.13",
     "winston-transport": "^4.5.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "micromatch@<4.0.8": ">=4.0.8"
+    }
   }
 }
