@@ -29,10 +29,10 @@ const getMiddleware = (
   allowedRoles: string[]
 ): ExpressMiddleware[] => {
   const middlewareArray = Array.isArray(middleware) ? middleware : [middleware];
-  const passThrough = (_req: Request, _res: Response, next: NextFunction) => next();
+  const passThrough: ExpressMiddleware = (_req: Request, _res: Response, next: NextFunction) => next();
 
   if (allowAnonymous) {
-    return passThrough;
+    return [passThrough];
   }
 
   if (useRbac) {
