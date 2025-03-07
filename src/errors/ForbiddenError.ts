@@ -9,6 +9,6 @@ export class ForbiddenError extends ApiError {
   }
 
   logMessage(logger: TSLogger): void {
-    logger.error(`Forbidden: ${this.getMessage()}`);
+    logger.debug(`Forbidden: ${this.getMessage()}`);
   }
 }

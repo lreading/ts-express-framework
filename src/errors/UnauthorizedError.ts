@@ -9,6 +9,6 @@ export class UnauthorizedError extends ApiError {
   }
 
   logMessage(logger: TSLogger): void {
-    logger.error(`Unauthorized: ${this.getMessage()}`);
+    logger.debug(`Unauthorized: ${this.getMessage()}`);
   }
 }

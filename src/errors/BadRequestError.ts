@@ -15,6 +15,6 @@ export class BadRequestError extends ApiError {
   }
 
   logMessage(logger: TSLogger): void {
-    logger.error(`Bad Request: ${this._errorMessage} ${this.getMessage()}`);
+    logger.debug(`Bad Request: ${this._errorMessage} ${this.getMessage()}`);
   }
 }

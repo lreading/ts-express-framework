@@ -9,6 +9,6 @@ export class NotFoundError extends ApiError {
   }
 
   logMessage(logger: TSLogger): void {
-    logger.error(`Not Found: ${this.getMessage()}`);
+    logger.debug(`Not Found: ${this.getMessage()}`);
   }
 }
