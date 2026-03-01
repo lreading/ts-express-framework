@@ -32,7 +32,15 @@ export const getResponses = (successResponse: OpenAPIV3.ResponseObject, method: 
     };
   case METHOD.DELETE:
     return {
-      200: successResponse,
+      204: successResponse,
+      401: UnauthorizedRequestResponse,
+      404: NotFoundResponse,
+      500: ServerErrorResponse
+    };
+  case METHOD.PATCH:
+    return {
+      204: successResponse,
+      400: BadRequestResponse,
       401: UnauthorizedRequestResponse,
       404: NotFoundResponse,
       500: ServerErrorResponse

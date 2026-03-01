@@ -67,7 +67,7 @@ export class HelloController {
     },
     allowedRoles: ['admin'] // Only use if you've mapped the req.user.roleNames, see auth middleware section
   })
-  asyn postData(req, res) {
+  async postData(req, res) {
     // Do something with the data
     return { foo: 'bar' };
   }
@@ -107,7 +107,7 @@ app.listen(3000, () => {
 
 This framework expects the auth middleware to create a `User` object on the request. This object should have a `roleNames` property that is an array of strings. This is used for role-based access control. If you do not specify roles in your controller annotations, it will only do authentication, not authorization.
 
-For more information on the user object, see the [User interface](src/entity/User.ts).
+For more information on the user object, see the [User interface](src/entity/User.ts). **Full reference (bootstrap, errors, Swagger, constraints):** see [docs/](docs/README.md).
 
 ## Api Response / Errors
 
