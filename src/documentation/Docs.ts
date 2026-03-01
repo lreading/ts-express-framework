@@ -37,6 +37,8 @@ export class SwaggerJsonGenerator {
       return 'delete';
     case METHOD.GET:
       return 'get';
+    case METHOD.PATCH:
+      return 'patch';
     case METHOD.POST:
       return 'post';
     case METHOD.PUT:
@@ -103,10 +105,7 @@ export class SwaggerJsonGenerator {
       description: 'Success Response',
       content: {
         'application/json': {
-          example: {
-            status: 200,
-            body: route.exampleResponse || {}
-          }
+          example: route.exampleResponse !== undefined ? route.exampleResponse : {}
         }
       }
     };

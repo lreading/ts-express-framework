@@ -4,14 +4,14 @@ import { TSLogger } from '@lreading/ts-logger';
 import { ApiError } from './ApiError';
 
 export class RedirectError extends ApiError {
-  public readonly readirectLocation: string;
+  public readonly redirectLocation: string;
 
   constructor(req: Request, redirectLocation: string) {
     super(req);
-    this.readirectLocation = redirectLocation;
+    this.redirectLocation = redirectLocation;
   }
 
   logMessage(logger: TSLogger): void {
-    logger.audit(`Redirecting request to: ${this.readirectLocation}`);
+    logger.audit(`Redirecting request to: ${this.redirectLocation}`);
   }
 }

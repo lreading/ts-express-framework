@@ -27,7 +27,7 @@ const getErrorResponse = (err: ApiError, res: Response): Response | void => {
     return response.unauthorized().toResponse(res);
   }
   if (err instanceof RedirectError) {
-    const redirectLocation = (err as RedirectError).readirectLocation;
+    const redirectLocation = (err as RedirectError).redirectLocation;
     return response.redirect(redirectLocation).toResponse(res);
   }
   return response.serverError().toResponse(res);
